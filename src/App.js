@@ -109,7 +109,7 @@ function App() {
 
   function deletarColaborador(id) {
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
-    // verificar se o id recebido é diferente do recebido por parametro então o jogador deve ser mantido na lista
+    // verificar se o id recebido é diferente do recebido por parametro então o jogador deve ser mantido na lista.
   }
 
   
