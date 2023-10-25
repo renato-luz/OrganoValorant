@@ -3,6 +3,8 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
+import { v4 as uuidv4 } from 'uuid'
+
 
 
 const Formulario = ({ aoCadastrar, times }) => {
@@ -17,10 +19,11 @@ const Formulario = ({ aoCadastrar, times }) => {
     evento.preventDefault()
     console.log('form enviado', nome, cargo, imagem, time)
     aoCadastrar({
+      id: uuidv4(),
       nome,
       cargo,
       imagem,
-      time
+      time,
     })
     setNome('');
     setCargo('');

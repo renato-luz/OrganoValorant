@@ -119,6 +119,8 @@ function App() {
     // verificar se o id recebido é diferente do recebido por parametro então o jogador deve ser mantido na lista
   }
 
+  
+
   return (
     <div>
       <Banner />
