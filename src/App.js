@@ -77,69 +77,6 @@ function App() {
   const inicial = [
     {
       id: uuidv4(),
-      nome: 'Asuna',
-      cargo: funcao[2],
-      imagem: 'https://www.prosettings.gg/wp-content/uploads/2021/09/Asuna-valorant-profile-picture.png',
-      time: times[0].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'Cryocells',
-      cargo: funcao[0],
-      imagem: 'https://owcdn.net/img/64169262982eb.png',
-      time: times[0].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'thwifo',
-      cargo: funcao[0],
-      imagem: 'https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=pad%2Cheight=675%2Cq=85%2Csharpen=2%2Cwidth=1200/wp-content/uploads/thwifo.png',
-      time: times[1].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'Xeppaa',
-      cargo: funcao[0],
-      imagem: 'https://prosettings.net/wp-content/uploads/xeppaa-1.png',
-      time: times[1].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'Demon1',
-      cargo: funcao[0],
-      imagem: 'https://pbs.twimg.com/profile_images/1695635739462258688/Mv0zjf3-_400x400.jpg',
-      time: times[2].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'jawgemo',
-      cargo: funcao[2],
-      imagem: 'https://pbs.twimg.com/profile_images/1695658806355853313/7jbFyCCZ_400x400.jpg',
-      time: times[2].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'mwzera',
-      cargo: funcao[0],
-      imagem: 'https://static1-br.millenium.gg/articles/8/14/84/8/@/158311-mwzera-vct-americas-furia-article_cover_bd-1.jpg',
-      time: times[3].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'havoc',
-      cargo: funcao[2],
-      imagem: 'https://cdn.ome.lt/oyPxBdI6c1Ob09d5hUUJ6fb-yr4=/1200x630/smart/extras/conteudos/havoc-the-union-loud.jpg',
-      time: times[3].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'keznit',
-      cargo: funcao[0],
-      imagem: 'https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/10/05/KRU-keznit.jpg',
-      time: times[4].nome
-    },
-    {
-      id: uuidv4(),
       nome: 'Less',
       cargo: funcao[4],
       imagem: 'https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0810%2Fr1208805_1296x729_16%2D9.jpg',
