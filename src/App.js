@@ -102,13 +102,6 @@ function App() {
       cargo: funcao[0],
       imagem: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6uCg3mWYxKvZYcT0czDtP4VOW1r63RZ2XQBfdswAnRYIRPUNVTCwbI5HIAojZlYz0fC704_k3o858vUUr-c-mHe3un1eK-LFuajRZHnZHujFbNCcwhfUnQ3mKhG3tEU37KoOgUoHMEjxHJgzrL60dVtZ-fCd4vmG3D2aM5MgxUV15RPnOdq0VxnaDGdc/s2048/52977826842_d1f65d8b00_k.webp',
       time: times[6].nome
-    },
-    {
-      id: uuidv4(),
-      nome: 'qck',
-      cargo: funcao[1],
-      imagem: 'https://s2-techtudo.glbimg.com/IuyzSFU5eKGmHMjUwtb-F03X2ZU=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/i/e/fRNGWARUqrqZaUoE6Iaw/qck-twitter-furia.jpg',
-      time: times[6].nome 
     }
   ]
 
