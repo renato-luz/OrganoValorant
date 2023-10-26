@@ -9,70 +9,60 @@ import { v4 as uuidv4 } from 'uuid'
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       id: uuidv4(),
-      nome:'100 Thieves',
-      corPrimaria: '#EF3232',
-      corSecundaria : '#E85D5D'
-      
+      nome: '100 Thieves',
+      cor: '#EF3232',
     },
     {
       id: uuidv4(),
-      nome:'Cloud9',
-      corPrimaria: '#00AEEF',
-      corSecundaria: '#66D2FA'
+      nome: 'Cloud9',
+      cor: '#00AEEF',
     },
     {
       id: uuidv4(),
-      nome:'Evil Geniuses' ,
-      corPrimaria: '#202a42',
-      corSecundaria: '#354261'
+      nome: 'Evil Geniuses',
+      cor: '#202a42',
     },
     {
       id: uuidv4(),
-      nome:'Furia',
-      corPrimaria: '#fff',
-      corSecundaria: '#000'
+      nome: 'Furia',
+      cor: '#fff',
     },
     {
       id: uuidv4(),
-      nome:'KRÜ' ,
-      corPrimaria: '#FF198F',
-      corSecundaria: '#E856A1'
-
+      nome: 'KRÜ',
+      cor: '#FF198F',
     },
     {
       id: uuidv4(),
-      nome:'Leviatán' ,
-      corPrimaria: '#739DBD',
-      corSecundaria: '#69ABDC'
+      nome: 'Leviatán',
+      cor: '#739DBD',
     },
     {
       id: uuidv4(),
-      nome:'Loud',
-      corPrimaria: '#41DB35',
-      corSecundaria: '#6dfc62'
+      nome: 'Loud',
+      cor: '#41DB35',
     },
     {
-      nome:'MIBR',
-      corPrimaria: '#27c463',
-      corSecundaria: '#f2de55'
+      id: uuidv4(),
+      nome: 'MIBR',
+      cor: '#27c463',
     },
     {
       id: uuidv4(),
       nome: 'NRG',
-      corPrimaria: '#1F1F1F',
-      corSecundaria: '#fff'
+      cor: '#1F1F1F',
     },
     {
       id: uuidv4(),
-      nome:'Sentinels',
-      corSecundaria: '#B33758',
-      corPrimaria: '#CE0037'
+      nome: 'Sentinels',
+      cor: '#CE0037'
+
+      
     }
-  ]
-  
+  ]);
 
   const inicial = [
     {
@@ -112,12 +102,17 @@ function App() {
     // verificar se o id recebido é diferente do recebido por parametro então o jogador deve ser mantido na lista.
   }
 
-  
+  function cadastrarTime(novoTime){
+    setTimes([...times, {...novoTime, id: uuidv4() }])
+  }
 
   return (
     <div>
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <Formulario 
+        times={times.map(time => time.nome)}
+        cadastrarTime = {cadastrarTime} 
+        aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
       <section className="times">
         <h1>Times</h1>
         {times.map((time, indice) => 
