@@ -67,6 +67,7 @@ function App() {
   const inicial = [
     {
       id: uuidv4(),
+      favorito: true,
       nome: 'Less',
       cargo: funcao[4],
       imagem: 'https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0810%2Fr1208805_1296x729_16%2D9.jpg',
@@ -74,6 +75,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: true,
       nome: 'Saadhak',
       cargo: funcao[2],
       imagem: 'https://s2-ge.glbimg.com/_mqiIsiykOk0oEtrmy1_bhiuHgY=/0x0:2048x1366/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/k/i/gSsbitRNAf05WPksaGBA/52923810730-7b49557bc5-k.jpg',
@@ -81,6 +83,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: true,
       nome: 'Cauanzin',
       cargo: funcao[3],
       imagem: 'https://noticias.maisesports.com.br/wp-content/uploads/2023/08/cauanzin-loud-valorant-champions-2023.jpg',
@@ -88,6 +91,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: true,
       nome: 'Tuyz',
       cargo: funcao[0],
       imagem: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6uCg3mWYxKvZYcT0czDtP4VOW1r63RZ2XQBfdswAnRYIRPUNVTCwbI5HIAojZlYz0fC704_k3o858vUUr-c-mHe3un1eK-LFuajRZHnZHujFbNCcwhfUnQ3mKhG3tEU37KoOgUoHMEjxHJgzrL60dVtZ-fCd4vmG3D2aM5MgxUV15RPnOdq0VxnaDGdc/s2048/52977826842_d1f65d8b00_k.webp',
@@ -106,6 +110,14 @@ function App() {
     setTimes([...times, {...novoTime, id: uuidv4() }])
   }
 
+  function resolverFavorito(id) {
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.id === id)
+        colaborador.favorito = !colaborador.favorito
+        return colaborador
+    }))
+  }
+
   return (
     <div>
       <Banner />
@@ -116,7 +128,8 @@ function App() {
       <section className="times">
         <h1>Times</h1>
         {times.map((time, indice) => 
-        <Time 
+        <Time
+          aoFavoritar={resolverFavorito}
           key={indice} 
           time={time} 
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
